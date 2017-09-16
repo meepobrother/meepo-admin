@@ -1,0 +1,23 @@
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <slidebar-user></slidebar-user>
+        <!-- search form -->
+        <slidebar-form></slidebar-form>
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" *ngFor="let group of menus" data-widget="tree">
+            <li class="header">MAIN NAVIGATION</li>
+            <li class="treeview" (click)="onClick($event,group.children,item)" [class.active]="item.active" *ngFor="let item of group.children">
+                <a href="javascript:;">
+                    <i [ngClass]="item.icon"></i> <span>{{item.title}}</span>
+                    <i class="fa fa-angle-left pull-right" *ngIf="item.label ==0 && item.children.length > 0"></i>
+                    <span *ngFor="let label of item.label" [ngClass]="label.class">{{label.title}}</span>
+                </a>
+                <ul class="treeview-menu" (onToggle)="onToggle($event,item)" [item]="item" *ngIf="item.children.length > 0"></ul>
+            </li>
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>

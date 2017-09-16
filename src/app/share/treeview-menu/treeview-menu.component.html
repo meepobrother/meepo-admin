@@ -1,0 +1,8 @@
+<li (click)="onClickChild($event,_item,it)" [class.active]="it.active" *ngFor="let it of _item.children">
+    <a href="javascript:;">
+        <i class="fa fa-circle-o"></i> {{it.title}}
+        <i class="fa fa-angle-left pull-right" *ngIf="it && it.children"></i>
+        <span *ngFor="let label of _item.label" [ngClass]="label.class">{{label.title}}</span>
+    </a>
+    <ul class="treeview-menu" (onToggle)="onBackToggle($event)" [level]="level + 1" *ngIf="it && it.children" [item]="it"></ul>
+</li>
