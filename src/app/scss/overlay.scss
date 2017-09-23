@@ -1,0 +1,59 @@
+$cdk-z-index-overlay-container: 1000;
+$cdk-z-index-overlay: 1000;
+$cdk-z-index-overlay-backdrop: 1000;
+$cdk-overlay-dark-backdrop-background: rgba(0, 0, 0, 0.6);
+$backdrop-animation-duration: 400ms !default;
+$backdrop-animation-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1) !default;
+@mixin cdk-overlay() {
+    .cdk-overlay-container,
+    .cdk-global-overlay-wrapper {
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .cdk-overlay-container {
+        position: fixed;
+        z-index: $cdk-z-index-overlay-container;
+    }
+    .cdk-global-overlay-wrapper {
+        display: flex;
+        position: absolute;
+        z-index: $cdk-z-index-overlay;
+    }
+    .cdk-overlay-pane {
+        position: absolute;
+        pointer-events: auto;
+        box-sizing: border-box;
+        z-index: $cdk-z-index-overlay;
+    }
+    .cdk-overlay-backdrop {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: $cdk-z-index-overlay-backdrop;
+        pointer-events: auto;
+        -webkit-tap-highlight-color: transparent;
+        transition: opacity $backdrop-animation-duration $backdrop-animation-timing-function;
+        opacity: 0;
+        &.cdk-overlay-backdrop-showing {
+            opacity: 0.48;
+        }
+    }
+    .cdk-overlay-dark-backdrop {
+        background: $cdk-overlay-dark-backdrop-background;
+    }
+    .cdk-overlay-transparent-backdrop {
+        background: none;
+    }
+    .cdk-global-scrollblock {
+        position: fixed;
+        width: 100%;
+        overflow-y: scroll;
+    }
+}
+
+@include cdk-overlay();

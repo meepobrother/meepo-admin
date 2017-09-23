@@ -2,8 +2,19 @@
     "extends": "../tsconfig.json",
     "compilerOptions": {
         "outDir": "../out-tsc/app",
+        "baseUrl": "./",
         "module": "es2015",
-        "types": []
+        "types": [],
+        "paths": {
+            "@meepo/core": ["./app/core"],
+            "@meepo/components": ["./app/components"],
+            "@meepo/utils": ["./app/utils"],
+            "@meepo/directives": ["./app/directives"],
+            "@meepo/redux": ["./app/redux"],
+            "@meepo/redux/*": ["./app/redux/*"],
+            "@meepo/share": ["./app/share"],
+            "@meepo/pages": ["./app/pages"]
+        }
     },
     "exclude": [
         "test.ts",

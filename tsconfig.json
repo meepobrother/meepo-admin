@@ -3,7 +3,7 @@
     "compilerOptions": {
         "outDir": "./dist/out-tsc",
         "sourceMap": true,
-        "declaration": true,
+        "declaration": false,
         "moduleResolution": "node",
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
@@ -17,17 +17,14 @@
         ],
         "baseUrl": "",
         "paths": {
-            "@meepo/common": ["./src/app/common"]
-        }
-    },
-    "exclude": [
-
-    ],
-    "angularCompilerOptions": {
-        "annotateForClosureCompiler": true,
-        "strictMetadataEmit": true,
-        "flatModuleOutFile": "index.js",
-        "flatModuleId": "@meepo/admin",
-        "skipTemplateCodegen": true
+            "@meepo/core": ["./src/app/core"],
+            "@meepo/components": ["./src/app/components"],
+            "@meepo/utils": ["./src/app/utils"],
+            "@meepo/directives": ["./src/app/directives"],
+            "@meepo/redux": ["./src/app/redux", "./src/app/redux/*"],
+            "@meepo/share": ["./src/app/share"],
+            "@meepo/pages": ["./src/app/pages"]
+        },
+        "skipLibCheck": false
     }
 }

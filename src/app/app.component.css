@@ -1,3 +1,11 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+@import "~ionicons/dist/css/ionicons.min.css";
+@import "~morris.js/morris.css";
+@import "./themes/admin.css";
+@import "./themes/skins/_all-skins.css";
+@import "./themes/jquery-jvectormap.css";
+@import "./themes/datepicker.css";
 .skin-blue {
     display: block;
     width: 100%;

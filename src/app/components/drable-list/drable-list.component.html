@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let item of items">
+        <ng-container *ngTemplateOutlet="item.templateRef;context: {$implicit: li}"></ng-container>
+    </li>
+</ul>

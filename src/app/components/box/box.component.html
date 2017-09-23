@@ -1,0 +1,14 @@
+<div class="box" [ngClass]="color">
+    <div class="box-header with-border">
+        <h3 class="box-title">{{title}}</h3>
+        <div class="box-tools pull-right">
+            <ng-content select=".box-right"></ng-content>
+        </div>
+    </div>
+    <div class="box-body">
+        <ng-content></ng-content>
+    </div>
+    <div class="box-footer">
+        <ng-content select=".box-footer"></ng-content>
+    </div>
+</div>

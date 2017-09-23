@@ -2,6 +2,8 @@
     <div class="wrapper">
         <app-header></app-header>
         <app-sidebar></app-sidebar>
+        <ng-content selector=".header"></ng-content>
+
         <div class="content-wrapper">
             <section class="content-header">
                 <app-breadcrumb></app-breadcrumb>
@@ -15,3 +17,132 @@
         <div class="control-sidebar-bg"></div>
     </div>
 </div>
+
+<!-- <app-selects (onChange)="onChange($event)" [items]="data"></app-selects> -->
+<!-- 
+<app-card>
+
+</app-card> -->
+
+<!-- <div *appFor="let i in 10">{{i}}</div> -->
+<!-- 
+<app-table [data]="data">
+    <app-table-column>
+        <ng-template thead>
+            新的信命1
+        </ng-template>
+        <ng-template let-item tbody>
+            <span>{{item.realname}}</span>
+            <span>{{item.realname}}</span>
+            <span>{{item.nickname}}</span>
+        </ng-template>
+    </app-table-column>
+    <app-table-column>
+        <ng-template thead>
+            新的信命2
+        </ng-template>
+        <ng-template let-item tbody>
+            <span>{{item.nickname}}</span>
+            <span>{{item.mobile}}</span>
+            <span>{{item.nickname}}</span>
+        </ng-template>
+    </app-table-column>
+    <app-table-column>
+        <ng-template thead>
+            新的信命3
+        </ng-template>
+        <ng-template let-item tbody>
+            <span>{{item.mobile}}</span>
+            <span>{{item.mobile}}</span>
+            <span>{{item.nickname}}</span>
+        </ng-template>
+    </app-table-column>
+</app-table> -->
+
+<!-- <draggable-list>
+    <ng-template draggable-item>
+        item1
+    </ng-template>
+    <ng-template draggable-item>
+        item2
+    </ng-template>
+    <ng-template draggable-item>
+        item3
+    </ng-template>
+    <ng-template draggable-item>
+        item4
+    </ng-template>
+    <ng-template draggable-item>
+        item5
+    </ng-template>
+</draggable-list> -->
+
+<!-- <app-dialog-container></app-dialog-container> -->
+<!-- <app-overlay></app-overlay> -->
+<!-- 
+<app-tab>
+    <ng-template appTabPanel title="代发货">
+        待发货
+        <test-md></test-md>
+    </ng-template>
+    <ng-template appTabPanel title="配送中">
+        待发货
+        <test-md></test-md>
+    </ng-template>
+    <ng-template appTabPanel title="待确认">
+        待发货
+        <test-md></test-md>
+    </ng-template>
+    <ng-template appTabPanel title="待评价">
+        待发货
+        <test-md></test-md>
+    </ng-template>
+    <ng-template appTabPanel title="代发货">
+        待发货
+        <test-md></test-md>
+    </ng-template>
+    <ng-template appTabPanel title="配送中">
+        待发货
+        <test-md></test-md>
+    </ng-template>
+    <ng-template appTabPanel title="待确认">
+        待发货
+        <test-md></test-md>
+    </ng-template>
+    <ng-template appTabPanel title="待评价">
+        待发货
+        <test-md></test-md>
+    </ng-template>
+    <ng-template appTabPanel title="代发货">
+        待发货
+        <test-md></test-md>
+    </ng-template>
+    <ng-template appTabPanel title="配送中">
+        待发货
+        <test-md></test-md>
+    </ng-template>
+    <ng-template appTabPanel title="待确认">
+        待发货
+        <test-md></test-md>
+    </ng-template>
+    <ng-template appTabPanel title="待评价">
+        待发货
+        <test-md></test-md>
+    </ng-template>
+    <ng-template appTabPanel title="代发货">
+        待发货
+        <test-md></test-md>
+    </ng-template>
+    <ng-template appTabPanel title="配送中">
+        待发货
+        <test-md></test-md>
+    </ng-template>
+    <ng-template appTabPanel title="待确认">
+        待发货
+        <test-md></test-md>
+    </ng-template>
+    <ng-template appTabPanel title="待评价">
+        待发货
+        <test-md></test-md>
+    </ng-template>
+</app-tab> -->

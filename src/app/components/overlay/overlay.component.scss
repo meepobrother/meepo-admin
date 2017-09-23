@@ -1,0 +1,22 @@
+ul {
+    display: flex;
+    flex-direction: column;
+    li {
+        line-height: 2em;
+        height: 2em;
+    }
+}
+
+.container {
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.container-absolute {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}

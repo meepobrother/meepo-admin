@@ -1,0 +1,16 @@
+<table>
+    <thead>
+        <tr>
+            <td *ngFor="let column of columns">
+                <ng-container *ngTemplateOutlet="column.header.templateRef"></ng-container>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of data">
+            <td *ngFor="let column of columns">
+                <ng-container *ngTemplateOutlet="column.body.templateRef; context: { $implicit: item }"></ng-container>
+            </td>
+        </tr>
+    </tbody>
+</table>

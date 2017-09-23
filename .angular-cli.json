@@ -1,7 +1,7 @@
 {
     "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
     "project": {
-        "name": "meepo-admin"
+        "name": "ng4.3.6"
     },
     "apps": [{
         "root": "src",
@@ -16,9 +16,9 @@
         "test": "test.ts",
         "tsconfig": "tsconfig.app.json",
         "testTsconfig": "tsconfig.spec.json",
-        "prefix": "page",
+        "prefix": "app",
         "styles": [
-            "styles.css"
+            "styles.scss"
         ],
         "scripts": [],
         "environmentSource": "environments/environment.ts",
@@ -48,7 +48,7 @@
         }
     },
     "defaults": {
-        "styleExt": "css",
+        "styleExt": "scss",
         "component": {}
     }
 }

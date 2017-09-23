@@ -1,0 +1,5 @@
+<ul>
+    <li (click)="doSelect(item)" [class.selected]="checkSelected(item)" *ngFor="let item of _items">
+        {{item.realname}}
+    </li>
+</ul>

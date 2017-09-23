@@ -3,24 +3,29 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import { ShareModule } from './share/share.module';
-import { AppStore } from './redux';
-import { PagesModule } from './pages';
+import { ShareModule } from '@meepo/share';
+import { AppStore } from '@meepo/redux';
+import { PagesModule } from '@meepo/pages';
+import { ComponentsModule } from '@meepo/components';
 
-import { ComponentsModule } from './components';
+import { DirectivesModule } from './directives';
+import { DialogComponent } from './tests/dialog/dialog.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
     ShareModule,
     AppStore,
     PagesModule,
-    ComponentsModule
+    ComponentsModule,
+    DirectivesModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DialogComponent]
 })
 export class AppModule { }

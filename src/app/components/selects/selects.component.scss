@@ -1,0 +1,18 @@
+.selected {
+    background: red;
+    color: #fff;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    li {
+        text-align: center;
+        line-height: 3em;
+        height: 3em;
+        padding: 0 1em;
+    }
+}

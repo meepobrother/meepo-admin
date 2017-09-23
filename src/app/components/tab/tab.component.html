@@ -1,0 +1,6 @@
+<ul>
+    <li [class.active]="item.active" (click)="active(item)" *ngFor="let item of panels;">{{item.title}}</li>
+</ul>
+
+<!-- <div class="container" #container></div> -->
+<ng-template [ngTemplateOutlet]="template"></ng-template>
