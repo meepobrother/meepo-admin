@@ -7,6 +7,8 @@ import { ShareModule } from './share/share.module';
 import { AppStore } from './redux';
 import { PagesModule } from './pages';
 
+import { ComponentsModule } from './components';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -15,7 +17,8 @@ import { PagesModule } from './pages';
     BrowserModule,
     ShareModule,
     AppStore,
-    PagesModule
+    PagesModule,
+    ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
