@@ -17,13 +17,13 @@
         ],
         "baseUrl": "",
         "paths": {
-            "@meepo/core": ["./src/app/core"],
-            "@meepo/components": ["./src/app/components"],
-            "@meepo/utils": ["./src/app/utils"],
-            "@meepo/directives": ["./src/app/directives"],
-            "@meepo/redux": ["./src/app/redux", "./src/app/redux/*"],
-            "@meepo/share": ["./src/app/share"],
-            "@meepo/pages": ["./src/app/pages"]
+            "@meepo/core/*": ["./src/app/core/*"],
+            "@meepo/components/*": ["./src/app/components/*"],
+            "@meepo/utils/*": ["./src/app/utils/*"],
+            "@meepo/directives/*": ["./src/app/directives/*"],
+            "@meepo/redux/*": ["./src/app/redux/*", "./src/app/redux/*"],
+            "@meepo/share/*": ["./src/app/share/*"],
+            "@meepo/pages/*": ["./src/app/pages/*"]
         },
         "skipLibCheck": false
     }
